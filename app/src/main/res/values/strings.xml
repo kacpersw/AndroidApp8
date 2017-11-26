@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Zadanie3</string>
+    <string name="Monday">Monday</string>
+    <string name="Tuesday">Tuesday</string>
+    <string name="Wednesday">Wednesday</string>
+    <string name="Thursday">Thursday</string>
+    <string name="Friday">Friday</string>
+    <string name="Saturday">Saturday</string>
+    <string name="Sunday">Sunday</string>
+    <string name="foundZero">You do not have any selected item now</string>
+
+    <plurals name="numberOfSelectedItems">
+        <item quantity="one">You have selected 1 product</item>
+        <item quantity="other">You have selected %d products</item>
+    </plurals>
+
+    <plurals name="sensorsSummaryInfo">
+        <item quantity="one">You have only one sensor!</item>
+        <item quantity="other">You have %d sensors!</item>
+    </plurals>
+    <string name="title_activity_accelometr">Accelometr</string>
+    <string name="textview">TextView</string>
+</resources>
