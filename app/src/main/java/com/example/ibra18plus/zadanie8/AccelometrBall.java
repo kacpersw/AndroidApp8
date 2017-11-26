@@ -85,12 +85,6 @@ public class AccelometrBall extends Activity implements SensorEventListener {
             y += (float) event.values[1];
         }
 
-        if (!hasSyringe) {
-            float randomX = nextFloat(0, maxX);
-            float randomY = nextFloat(0, maxY);
-            hasSyringe = !hasSyringe;
-        }
-
 
         if (x >= 0 && y >= 0 && x <= maxX && y <= maxY) {
             imageView.setX(x);
