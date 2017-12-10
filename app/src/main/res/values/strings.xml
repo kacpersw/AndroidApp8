@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Zadanie3</string>
+
     <string name="Monday">Monday</string>
     <string name="Tuesday">Tuesday</string>
     <string name="Wednesday">Wednesday</string>
@@ -8,6 +8,11 @@
     <string name="Saturday">Saturday</string>
     <string name="Sunday">Sunday</string>
     <string name="foundZero">You do not have any selected item now</string>
+
+
+    <string name="textview">Search For Books!</string>
+    <string name="button">Search</string>
+    <string name="hint">Title and/or Author</string>
 
     <plurals name="numberOfSelectedItems">
         <item quantity="one">You have selected 1 product</item>
@@ -19,5 +24,12 @@
         <item quantity="other">You have %d sensors!</item>
     </plurals>
     <string name="title_activity_accelometr">Accelometr</string>
-    <string name="textview">TextView</string>
+    <string name="textview2">TextView</string>
+
+    <string name="app_name">SqLiteTodoManager</string>
+    <string name="button_add">New task</string>
+    <string name="button_clear">Clear completed</string>
+    <string name="edittext_hint_new_task">Type here your new task...</string>
+    <string name="button_save">Save task</string>
+    <string name="button_cancel">Cancel</string>
 </resources>

@@ -6,9 +6,11 @@
         android:name="android.hardware.sensor.accelerometr"
         android:required="true" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_books"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -22,7 +24,8 @@
         </activity>
         <activity android:name=".ProximitySensor" />
         <activity android:name=".AccelometrBall" />
-        <activity android:name=".Accelometr"></activity>
+        <activity android:name=".Accelometr" />
+        <activity android:name=".ApiActivity"></activity>
     </application>
 
 </manifest>

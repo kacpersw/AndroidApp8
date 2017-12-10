@@ -34,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
     private final String PROXIMITY = "proximity";
 
 
+    private static final String QUERY_URL = "http://openlibrary.org/search.json?q=";
+
+    private Button btnApi;
 
     public static void setListAdapter() {
         MainActivity.listAdapter.notifyDataSetChanged();
@@ -45,13 +48,27 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+       // mainTextView.setText("Set in Java!");
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         Configuration configuration = getResources().getConfiguration();
 
 
         setContentView(R.layout.activity_main);
+
+
+        btnApi=(Button) findViewById(R.id.btAPI);
+
+
+        btnApi.setOnClickListener(new Button.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent;
+                intent = new Intent(v.getContext(), ApiActivity.class);
+                startActivity(intent);
+            }
+        });
 
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         List<Sensor> deviceSensors = sensorManager.getSensorList(Sensor.TYPE_ALL);
@@ -85,6 +102,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
+
+
+
+
+
     public void goSensorAcitivity(View view) {
         Button b = (Button) findViewById(R.id.goToSensorButton);
         int id = listView.getPositionForView(view);
@@ -103,5 +126,12 @@ public class MainActivity extends AppCompatActivity {
     public void goBall(View view) {
         Intent intent2 = new Intent(MainActivity.this, AccelometrBall.class);
         startActivity(intent2);
+    }
+
+    /**
+     * Created by Ibra18plus on 2017-12-10.
+     */
+
+    public static class ToDoTask {
     }
 }
