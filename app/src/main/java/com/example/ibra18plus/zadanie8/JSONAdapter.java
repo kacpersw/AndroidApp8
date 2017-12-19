@@ -17,7 +17,6 @@ import org.json.JSONObject;
  * Created by Ibra18plus on 2017-12-10.
  */
 public class JSONAdapter extends BaseAdapter {
-
     private static final String IMAGE_URL_BASE = "http://covers.openlibrary.org/b/id/";
 
     Context mContext;
@@ -30,13 +29,14 @@ public class JSONAdapter extends BaseAdapter {
         mJsonArray = new JSONArray();
     }
 
+
     @Override
     public int getCount() {
         return mJsonArray.length();
     }
 
     @Override
-    public JSONObject getItem(int position) {
+    public Object getItem(int position) {
         return mJsonArray.optJSONObject(position);
     }
 
@@ -73,7 +73,6 @@ public class JSONAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
         // More code after this
-// Get the current book's data in JSON form
         JSONObject jsonObject = (JSONObject) getItem(position);
 
 // See if there is a cover ID in the Object
@@ -93,6 +92,7 @@ public class JSONAdapter extends BaseAdapter {
             // If there is no cover ID in the object, use a placeholder
             holder.thumbnailImageView.setImageResource(R.drawable.ic_books);
         }
+
         // Grab the title and author from the JSON
         String bookTitle = "";
         String authorName = "";
@@ -111,17 +111,17 @@ public class JSONAdapter extends BaseAdapter {
         return convertView;
     }
 
-
     public void updateData(JSONArray jsonArray) {
         // update the adapter's dataset
         mJsonArray = jsonArray;
         notifyDataSetChanged();
     }
-    // this is used so you only ever have to do
-// inflation and finding by ID once ever per View
+
     private static class ViewHolder {
         public ImageView thumbnailImageView;
         public TextView titleTextView;
         public TextView authorTextView;
     }
+
+
 }

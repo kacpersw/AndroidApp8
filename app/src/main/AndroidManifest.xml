@@ -25,7 +25,8 @@
         <activity android:name=".ProximitySensor" />
         <activity android:name=".AccelometrBall" />
         <activity android:name=".Accelometr" />
-        <activity android:name=".ApiActivity"></activity>
+        <activity android:name=".ApiActivity" />
+        <activity android:name=".Main2Activity"></activity>
     </application>
 
 </manifest>
